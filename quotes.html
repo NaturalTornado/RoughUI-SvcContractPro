@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceContractPro - Quotes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        header img {
+            height: 40px;
+        }
+        header .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        header .user-profile img {
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        nav {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100%;
+            padding-top: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 500;
+            display: flex;
+            flex-direction: column;
+        }
+        nav a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: yellow;
+            color: black;
+        }
+        .content {
+            margin-left: 200px;
+            margin-top: 60px;
+            padding: 20px;
+            flex-grow: 1;
+            background-color: #f0f0f0;
+        }
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .content-header h1 {
+            margin: 0;
+            color: #333;
+        }
+        .content-header button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .content-header button:hover {
+            background-color: darkblue;
+        }
+        .table-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <div class="user-profile">
+            <img src="images/user-profile.jpg" alt="User Profile">
+            <span>Steve Mathewson</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quotes.html" class="active">Quotes</a>
+        <a href="projects.html">Projects</a>
+        <a href="scheduling.html">Scheduling</a>
+        <a href="invoices.html">Invoices</a>
+        <a href="clients.html">Clients</a>
+        <a href="reports.html">Reports</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+    <div class="content">
+        <div class="content-header">
+            <h1>Quotes</h1>
+            <button>Create A New Quote</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Quote Number</th>
+                        <th>Quote Name</th>
+                        <th>Customer</th>
+                        <th>Owner</th>
+                        <th>Quote Value</th>
+                        <th>Quote Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example quote rows -->
+                    <tr>
+                        <td>001</td>
+                        <td>Website Redesign</td>
+                        <td>ACME Corp</td>
+                        <td>Steve Mathewson</td>
+                        <td>$5,000</td>
+                        <td>2024-06-01</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>SEO Optimization</td>
+                        <td>XYZ Ltd</td>
+                        <td>John Doe</td>
+                        <td>$3,000</td>
+                        <td>2024-06-10</td>
+                    </tr>
+                    <!-- Add more quotes here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
